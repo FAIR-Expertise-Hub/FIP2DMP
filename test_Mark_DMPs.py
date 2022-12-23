@@ -45,7 +45,7 @@ for file_id in dmp_file_ids:
         template_uri = map_dmp_name_to_URI[template]
         print ('The template has URI ', template_uri)
         print ('----The RDF Triple----')
-        print ('<'+ dmp_uri+ '> <'+ has_dmp_id+ '> '+ str(file_id) + '^^XML:String.')
+        print ('<'+ dmp_uri+ '> <'+ has_dmp_id+ '> "'+ str(file_id) + '"^^http://www.w3.org/2001/XMLSchema#integer.')
         print ('<'+ dmp_uri+ '> <'+ uses_template+ '> <'+ template_uri+ '>.')
         print('\n\n')
 
