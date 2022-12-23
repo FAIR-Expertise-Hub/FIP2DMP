@@ -1,3 +1,5 @@
+# general description about this code
+
 import json
 
 from collections import Counter
@@ -26,12 +28,13 @@ map_dmp_name_to_URI ["ERC DMP"] = 'https://erc.eu/template'
 map_dmp_name_to_URI ["VU DMP template 2021"] = 'https://templates.vu.nl/dmp_template_v1.3'
 map_dmp_name_to_URI ["DCC Template"] = 'https://templates.vu.nl/dcc_template'
 
-
+path_to_files = './dmps/'
+# for each file, we take the template information
 for file_id in dmp_file_ids:
     print ('file id = ', file_id)
     file_name = str(file_id) + '.json'
     print ('file_name = ', file_name)
-    with open ('./dmps/'+file_name) as f:
+    with open (path_to_files+file_name) as f:
         data = json.load(f)
         template = data[0][0]['template']['title']
         print ('The template used: ', template)
@@ -46,7 +49,7 @@ for file_id in dmp_file_ids:
         print ('<'+ dmp_uri+ '> <'+ uses_template+ '> <'+ template_uri+ '>.')
         print('\n\n')
 
-linked_dmp_namespace = 'https://linked-dmp.vu.nl/v0.1/'
+# Next, we print some statistics of the template information
 
 print('\nThe following is a summary of these templates:')
 for tmp_name in tmp_ct.keys():
