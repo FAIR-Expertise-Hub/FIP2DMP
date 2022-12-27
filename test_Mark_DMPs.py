@@ -1,4 +1,5 @@
-# This code takes the DMPs in the provided JSON files, prints out template information for each DMP (including RDF Triples).
+# This code takes the DMPs in the provided JSON files, prints out template 
+# information for each DMP (including RDF Triples).
 
 import json
 
