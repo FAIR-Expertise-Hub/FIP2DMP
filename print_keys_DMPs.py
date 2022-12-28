@@ -1,5 +1,4 @@
-# This code takes the DMPs in the provided JSON files, prints out template
-# information for each DMP (including RDF Triples).
+# This code takes the DMPs in the provided JSON files, prints out the classes and the attributes for each DMP.
 
 import json
 from pprint import pprint
@@ -12,9 +11,6 @@ dmp_file_ids = [102898, 110561, 64375,  83797,  94351,
 105685, 38304,  77722,  85799,  96070,
 105776, 56773,  78027,  88134,  96543,
 106382, 64337,  78822,  90090,  98079]
-
-
-
 
 print ('From the Open Science team, we obtained in total ', len (dmp_file_ids),  ' DMPs.')
 
