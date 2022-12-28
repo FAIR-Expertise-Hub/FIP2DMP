@@ -39,13 +39,14 @@ map_dmp_name_to_URI ["DCC Template"] = 'https://templates.vu.nl/dcc_template'
 
 path_to_files = './dmps/'
 
+# Function to print out the attributes in each DMP json file. 
 def print_keys(dl, num_tab):
     if isinstance(dl, dict):
         for k in dl.keys():
             print ('\t'*num_tab, k)
             print_keys(dl[k], num_tab +1)
 
-# map template to file_ids
+# Map template to file_ids.
 map_template_to_file_ids = {}
 for file_id in dmp_file_ids:
     print ('file id = ', file_id)
@@ -59,6 +60,7 @@ for file_id in dmp_file_ids:
         else:
             map_template_to_file_ids[template] = [file_id]
 
+# Next, we print some template information and an overview of all the attributes for each DMP json file.
 for temp in map_template_to_file_ids:
     print ('*'*20)
     print ('Now Let us handle DMP template: ', temp)
