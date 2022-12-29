@@ -45,10 +45,9 @@ for file_id in dmp_file_ids:
         print ('The template used: ', template)
         tmp_ct[template] += 1
         dmp_uri = linked_dmp_namespace+'dmp/'+str(file_id)
-        print ('This VU DMP has a URI ', dmp_uri)
-        print ('It uses template ', template)
+        print ('This VU DMP has a URI: ', dmp_uri)
         template_uri = map_dmp_name_to_URI[template]
-        print ('The template has URI ', template_uri)
+        print ('The template has URI: ', template_uri)
         print ('----The RDF Triple----')
         print ('<'+ dmp_uri+ '> <'+ has_dmp_id+ '> "'+ str(file_id) + '"^^<http://www.w3.org/2001/XMLSchema#integer>.')
         print ('<'+ dmp_uri+ '> <'+ uses_template+ '> <'+ template_uri+ '>.')
