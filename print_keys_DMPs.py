@@ -67,5 +67,4 @@ for temp in map_template_to_file_ids:
         print ('file_name = ', file_name)
         with open (path_to_files+file_name) as f:
             data = json.load(f)
-
             print_keys(data[0][0], 1)
