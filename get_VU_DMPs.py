@@ -1,4 +1,4 @@
-# This code takes the DMPs in the provided JSON files, prints out the classes and the attributes for each DMP.
+# This code takes the DMPs in the provided JSON files, and returns the file ids and titles for all the VU templates.
 
 import json
 from pprint import pprint
@@ -69,4 +69,5 @@ for temp in map_template_to_file_ids:
                 data = json.load(f)
                 for k in data[0][0].keys():
                     if k == 'title':
-                        print(file_id, ":", data[0][0][k]) 
+                        print(file_id, ":", data[0][0][k])
+                        
