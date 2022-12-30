@@ -64,10 +64,9 @@ for temp in map_template_to_file_ids:
     if temp in res.keys():
         print('\n' + str(temp))
         for file_id in map_template_to_file_ids[temp]:
-            if str(file_id) in str(res):
-                file_name = str(file_id) + '.json'
-                with open (path_to_files+file_name) as f:
-                    data = json.load(f)
-                    for k in data[0][0].keys():
-                        if k == 'title':
-                            print(file_id, ":", data[0][0][k]) 
+            file_name = str(file_id) + '.json'
+            with open (path_to_files+file_name) as f:
+                data = json.load(f)
+                for k in data[0][0].keys():
+                    if k == 'title':
+                        print(file_id, ":", data[0][0][k]) 
