@@ -1,4 +1,4 @@
-# This code takes the DMPs in the provided JSON files, prints out template 
+# This code takes the DMPs in the provided JSON files, prints out template
 # information for each DMP (including RDF Triples).
 
 import json
@@ -24,14 +24,22 @@ has_dmp_id = linked_dmp_namespace+'has_dmp_id'
 
 # Create dictionary for each DMP template and the URI.
 map_dmp_name_to_URI = {}
-map_dmp_name_to_URI ["Data Management Plan NWO (September 2020)"] = 'https://www.nwo.nl/dmp_template_2020'
-map_dmp_name_to_URI ["VU DMP template for research with personal data"] = 'https://templates.vu.nl/dmp_template'
+# Group 1: Old DMPS from the VU
+map_dmp_name_to_URI ["VU DMP template for research with non-personal data"] = 'https://templates.vu.nl/outdated_dmp_template_non-personal_data'
+map_dmp_name_to_URI ["VU DMP template for research with personal data"] = 'https://templates.vu.nl/outdated_dmp_template_with_personal_data'
+map_dmp_name_to_URI ["Data Management Plan NWO (September 2020)"] = 'https://www.nwo.nl/dmp_nwo_template_2020'
+
+# Group 2: VU's single (conditional) templates to get certified
+map_dmp_name_to_URI ["VU DMP template 2021"] = 'https://templates.vu.nl/dmp_template_2021'
+map_dmp_name_to_URI ["VU DMP template 2021 (NWO & ZonMW certified)"] = 'https://templates.vu.nl/dmp_template_nwo_zonmw_2021'
+
+# Group 3: Latest templates:
 map_dmp_name_to_URI ["1 - VU DMP template 2021 (NWO & ZonMW certified) v1.3"] = 'https://templates.vu.nl/dmp_template_v1.3'
-map_dmp_name_to_URI ["VU DMP template for research with non-personal data"] = 'https://templates.vu.nl/dmp_template_non-personal_data'
-map_dmp_name_to_URI ["VU DMP template 2021 (NWO & ZonMW certified)"] = 'https://templates.vu.nl/dmp_template_nwo_zonmw'
-map_dmp_name_to_URI ["ERC DMP"] = 'https://erc.eu/template'
-map_dmp_name_to_URI ["VU DMP template 2021"] = 'https://templates.vu.nl/dmp_template_v1.3'
-map_dmp_name_to_URI ["DCC Template"] = 'https://templates.vu.nl/dcc_template'
+
+# Group 4: Other templates:
+map_dmp_name_to_URI ["ERC DMP"] = 'https://templates.vu.nl/erc_dmp_template'
+map_dmp_name_to_URI ["DCC Template"] = 'https://templates.vu.nl/dcc_dmp_template'
+
 
 path_to_files = './dmps/'
 # For each file, we take the template information.
