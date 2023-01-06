@@ -33,12 +33,13 @@ def print_keys(dl, num_tab):
             print_keys(l, num_tab+1)
         # print (dl)
 
+# remove html tags and return a clean string.
 import re
 def striphtml(data):
     p = re.compile(r'<.*?>')
     return p.sub('', data)
 
-
+# print all the questions. 
 def print_questions(dl, num_tab):
     if isinstance(dl, dict):
         for k in dl.keys():
