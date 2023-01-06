@@ -16,12 +16,22 @@ print ('From the Open Science team, we obtained in total ', len (dmp_file_ids), 
 
 path_to_files = './dmps/'
 
-# Function to print out the attributes in each DMP json file. 
+# Function to print out the attributes in each DMP json file.
 def print_keys(dl, num_tab):
     if isinstance(dl, dict):
         for k in dl.keys():
             print ('\t'*num_tab, k)
             print_keys(dl[k], num_tab +1)
+            # --------comment the four lines below to print only the keys
+            # if not isinstance(dl[k], list) and not isinstance(dl[k], dict):
+            #     print ('\t'*num_tab, k, ' : ', dl[k])
+            # else:
+            #     print_keys(dl[k], num_tab +1)
+    elif isinstance(dl, list):
+        for l in dl:
+            # print ('\t'* num_tab, '--------')
+            print_keys(l, num_tab+1)
+        # print (dl)
 
 # Map template to file_ids.
 map_template_to_file_ids = {}
