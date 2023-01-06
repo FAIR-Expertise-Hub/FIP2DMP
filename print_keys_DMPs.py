@@ -33,6 +33,42 @@ def print_keys(dl, num_tab):
             print_keys(l, num_tab+1)
         # print (dl)
 
+import re
+def striphtml(data):
+    p = re.compile(r'<.*?>')
+    return p.sub('', data)
+
+
+def print_questions(dl, num_tab):
+    if isinstance(dl, dict):
+        for k in dl.keys():
+            # if num_tab > 2 :
+            #     print ('\t'*num_tab, k, dl[k])
+            # print_keys(dl[k], num_tab +1)
+            # --------comment the four lines below to print only the keys
+            # if k =='description':
+            #     print ('\t'*num_tab, dl[k])
+
+            if k == 'questions':
+                print ('\n','\t'*num_tab, 'Section title:', dl['title'])
+                # print ('\t'*num_tab, 'description:', dl['description'])
+                print ('\t'*num_tab, 'questions:')
+                for q in dl[k]:
+                    print ('\t' * (num_tab+1), )
+                    print ('\t' * (num_tab+1), 'Question No.', q['number'], ' = ', striphtml(q['text']))
+
+            # if not isinstance(dl[k], list) and not isinstance(dl[k], dict):
+            #     print ('\t'*num_tab, k, ' : ', dl[k])
+
+            print_questions(dl[k], num_tab +1)
+    elif isinstance(dl, list):
+        for l in dl:
+            # if num_tab > 3 :
+            #     print ('\t'*num_tab, l)
+            # print ('\t'* num_tab, '--------')
+            print_questions(l, num_tab + 1)
+
+
 # Map template to file_ids.
 map_template_to_file_ids = {}
 for file_id in dmp_file_ids:
@@ -58,4 +94,5 @@ for temp in map_template_to_file_ids:
         print ('file_name = ', file_name)
         with open (path_to_files+file_name) as f:
             data = json.load(f)
-            print_keys(data[0][0], 1)
+            # print_keys(data[0][0], 1)
+            print_questions(data[0][0], 1)
