@@ -1,0 +1,44 @@
+"""
+This file contains analysis of Q4 and Q5.
+Both questions directly refer to the questions in the DMP and ask which ones were helpful or misleading.
+"""
+
+import pandas as pd
+from tabulate import tabulate
+from main import data, q
+
+def calculate_percentage_count(q_responses, data, question_name):
+    q_responses_flat = [q for response in q_responses for q in response]
+    q_count = {key: sum(key in response for response in q_responses_flat) for key in q}
+    total_volunteers = len(data)
+    q_percentage = {key: (count / total_volunteers) * 100 for key, count in q_count.items()}
+    
+    # Create a DataFrame for the table
+    q_table = pd.DataFrame({'Percentage': q_percentage, 'Count': q_count})
+    q_table['Percentage'] = q_table['Percentage'].apply(lambda x: f"{x:.1f}%")
+    
+    # Add a 'Question' column for clarity
+    q_table['Question'] = [question_name[key] for key in q_table.index]
+    q_table = q_table[['Question', 'Percentage', 'Count']]
+    
+    return q_table
+
+# Define the Q4 and Q5 responses from volunteers
+q4_responses = [vol[3] for vol in data.values()]
+q5_responses = [vol[4] for vol in data.values()]
+
+# Calculate and print the tables for Q4 and Q5
+table1 = calculate_percentage_count(q4_responses, data, q)
+table2 = calculate_percentage_count(q5_responses, data, q)
+
+# Convert the DataFrames to tabulated format
+table1 = tabulate(table1, headers='keys', tablefmt="simple_grid")
+table2 = tabulate(table2, headers='keys', tablefmt="simple_grid")
+
+# Print the tabulated tables for Q4 and Q5
+print('Table for Q4: On which question(s) were the suggestions helpful or inspiring?')
+print(table1)
+print('\n\nTable for Q5: On which question(s) were the suggestions not helpful or misleading?')
+print(table2)
+
+
