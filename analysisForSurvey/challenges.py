@@ -18,7 +18,7 @@ categories = {
     'Understanding Recommendations from Communities': ['not clear how the recommendations from different communities came about', 'could judge their usefulness'],
     'Understanding the Use of FIPS/FERs': ['use of fips and fers'],
     'Specific DMP Challenges': ['two pages in that file instead of seven pages', 'concepts in the DMP are difficult to comprehend'],
-    'No Challenges': ['did not face any specific difficulties'],
+    # 'No Challenges': ['did not face any specific difficulties', 'none'],
 }
 
 # Calculate the total number of volunteers
