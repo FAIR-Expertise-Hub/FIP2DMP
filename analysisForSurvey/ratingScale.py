@@ -33,7 +33,7 @@ table_data = []
 for question in questions:
     if question['name'] in questions_to_include:
         question_name = question['name']
-        mean_value = df.loc[question_name].mean()
+        mean_value = round(df.loc[question_name].mean(), 2)
         max_value = df.loc[question_name].max()
         min_value = df.loc[question_name].min()
         median_value = df.loc[question_name].median()
