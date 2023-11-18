@@ -41,8 +41,10 @@ for question in questions:
         range_value = [min_value, max_value]  # Combine min and max as a list
         table_data.append([question_name, question_text[questions_to_include.index(question_name)], range_value, mean_value, median_value, std_value])
 
+
 # Create and print the table
 table_headers = ['Question Description','Range', 'Mean', 'Median', 'Std']
+
 
 table = tabulate(table_data, headers=table_headers, tablefmt="simple_grid")
 print(table)
