@@ -13,6 +13,8 @@ We conducted testing on our knowledge model using FAIR Wizard with 5 users. The 
 ### Directory: `analysisForSurvey`
 This directory contains Python scripts for analyzing specific survey questions.
 
+- **`generalAnalysis.py`**
+  - Analyzes data for each question.
 - **`analysisOfRemainingQuestions.py`**
   - Analyzes questions Q6, Q8, and Q9 from the survey.
 - **`challenges.py`**
