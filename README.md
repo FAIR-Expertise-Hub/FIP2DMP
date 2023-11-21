@@ -13,6 +13,8 @@ We conducted testing on our knowledge model using FAIR Wizard with 5 users. The 
 ### Directory: `analysisForSurvey`
 This directory contains Python scripts for analyzing specific survey questions.
 
+- **`main.py`**
+  - Stores data on each volunteer.
 - **`generalAnalysis.py`**
   - Analyzes data for each question.
 - **`analysisOfRemainingQuestions.py`**
@@ -23,7 +25,7 @@ This directory contains Python scripts for analyzing specific survey questions.
   - Analyzes questions Q4 and Q5, assessing the helpfulness or misleading nature of DMP questions.
 - **`importanceOfEntities.py`**
   - Analyzes question Q11, examining the impact of suggestions from various entities.
-- **`main.py`**
+- **`ratingScale.py`**
   - Analyzes rating scale questions (Q1, Q2, Q3, Q7, Q10) using a scale from 1 to 5.
  
 ### Survey Questions
