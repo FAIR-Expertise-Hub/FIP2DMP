@@ -3,6 +3,12 @@
 ## Overview
 Welcome to the FIP2DMP project! This open-source project focuses on analyzing survey results related to Data Management Plans (DMPs) and mapping DMP questions to FAIR implementation profiles (FIPs). The project uses Python for analysis and includes code for processing survey data, mapping questions, and extracting valuable insights.
 
+## Knowledge Models
+The project includes knowledge models from FAIR Wizard for both Leiden and Vrije Universiteit Amsterdam, facilitating comprehensive analysis.
+
+### Testing Knowledge Model on FAIR Wizard
+We conducted testing on our knowledge model using FAIR Wizard with 5 users. The survey results indicate their experience in creating a DMP project using the knowledge model, which provides suggestions from different research communities as answers.
+
 ## Analysis for Survey
 ### Directory: `analysisForSurvey`
 This directory contains Python scripts for analyzing specific survey questions.
@@ -19,7 +25,7 @@ This directory contains Python scripts for analyzing specific survey questions.
   - Analyzes rating scale questions (Q1, Q2, Q3, Q7, Q10) using a scale from 1 to 5.
  
 ### Survey Questions
-Below is a table defining the survey questions (Q1-Q12) with dummy questions:
+Below is a table defining the survey questions (Q1-Q12):
 
 | Question | Description |
 |----------|-------------|
@@ -55,9 +61,6 @@ Additional Files:
 - **`print_keys_DMPs.py`**
 - **`test_Mark_DMPs.py`**
 - **`vu-template-dmp-with-fer-v2 4.1.0.km`**
-
-## Knowledge Models
-The project includes knowledge models from FAIR Wizard for both Leiden and Vrije Universiteit Amsterdam, facilitating comprehensive analysis.
 
 ## Usage
 To run the analysis scripts, ensure you have Python installed. Navigate to the respective script in the `analysisForSurvey` directory and execute it using the Python interpreter.
