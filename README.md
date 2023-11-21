@@ -56,15 +56,21 @@ This directory focuses on mapping DMP questions to FAIR implementation profiles 
   - Defines the structure of a FIP question.
 
 Additional Files:
-- **`FIP2DMPLeiden_conceptual_mapping (1).pdf`**
-- **`get_VU_DMPs.py`**
+- **`FIP2DMPLeiden_conceptual mapping (1).pdf`**
+  - This document links questions in the Leiden DMP template to FAIR principles, providing a conceptual mapping.
 - **`global_KM-Leiden-DMP.km`**
 - **`gofair-fip-wizard-3.0.0.3.km`**
 - **`leiden_KM-Leiden-FIP2DMP_1.0.0.km`**
 - **`leiden_maDMP4F_0.0.7.km`**
-- **`print_keys_DMPs.py`**
-- **`test_Mark_DMPs.py`**
+  - Leiden knowledge model files.
 - **`vu-template-dmp-with-fer-v2 4.1.0.km`**
+  - Vrije Universiteit knowledge model file.
+- **`get_VU_DMPs.py`**
+  - This Python code takes the DMPs in the provided JSON files and returns the file IDs and titles for all the Vrije Universiteit templates.
+- **`print_keys_DMPs.py`**
+  - This Python code takes the DMPs in the provided JSON files and prints out the classes and attributes for each DMP.
+- **`test_Mark_DMPs.py`**
+  - This Python code takes the DMPs in the provided JSON files and prints out template information for each DMP, including RDF Triples.
 
 ## Usage
 To run the analysis scripts, ensure you have Python installed. Navigate to the respective script in the `analysisForSurvey` directory and execute it using the Python interpreter.
