@@ -27,7 +27,7 @@ This directory contains Python scripts for analyzing specific survey questions.
   - Analyzes question Q11, examining the impact of suggestions from various entities.
 - **`ratingScale.py`**
   - Analyzes rating scale questions (Q1, Q2, Q3, Q7, Q10) using a scale from 1 to 5.
- 
+
 ### Survey Questions
 Below is a table defining the survey questions (Q1-Q12):
 
@@ -55,7 +55,7 @@ This directory focuses on mapping DMP questions to FAIR implementation profiles 
 - **`fip_questions.py`**
   - Defines the structure of a FIP question.
 
-Additional Files:
+Additional scripts and documents:
 - **`FIP2DMPLeiden_conceptual mapping (1).pdf`**
   - This document links questions in the Leiden DMP template to FAIR principles, providing a conceptual mapping.
 - **`global_KM-Leiden-DMP.km`**
@@ -82,4 +82,8 @@ This project is open source, and contributions are welcome.
 
 Thank you for your interest in FIP2DMP!
 
+## Contact
+Contact: Shuai Wang (shuai.wang@vu.nl)
 
+## Licence
+CC-NY-NC 4.0
