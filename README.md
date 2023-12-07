@@ -86,4 +86,4 @@ Thank you for your interest in FIP2DMP!
 Contact: Shuai Wang (shuai.wang@vu.nl)
 
 ## Licence
-CC-NY-NC 4.0
+CC-BY 4.0
