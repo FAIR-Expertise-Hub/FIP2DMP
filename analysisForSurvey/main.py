@@ -103,7 +103,7 @@ questions = [
     },
 ]
 
-# Manually input data for 5 volunteers
+# Extracted input data from the responses of volunteers
 data = {
     'Volunteer 1': [3, 2, 3, (q['4.6'], q['4.8'], q['4.9'], q['4.13'], q['5.1'], q['5.2'], q['5.3']), (q['None'], ), 'yes', 5, '6-10 years', 'yes', 3, [entities[0], entities[1], entities[2], entities[3], entities[8], entities[9], entities[11], entities[12]], 'Terminology not always clear (many abbreviations and lots of technical language). Not being familiar with metadata standards, this was confusing. I think not only I, but most colleagues, are in need of information/training on Data management  practices in general, but perhaps metadata practices in particular.'],
     'Volunteer 2': [3, 4, 2, (q['4.6'], q['4.8'], q['4.13'], q['5.1']), (q['4.9'], q['5.3']), 'no', 3, '3-5 years', 'yes', 4, [entities[0], entities[7], entities[8], entities[9], entities[10], entities[12]], 'At times I struggled understanding the terminology (while I have created DMPs before I wouldn\'t describe myself as particularly knowledgeable on the matter) On a more methodological level, I would probably have had an easier time doing this for a project I am working on myself. At times it was not clear to me how the recommendations from different communities came about and how I could judge their usefulness. More context might have helped.'],
