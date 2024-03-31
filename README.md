@@ -3,11 +3,7 @@
 ## Overview
 Welcome to the FIP2DMP project! This open-source project focuses on analyzing survey results related to Data Management Plans (DMPs) and mapping DMP questions to FAIR implementation profiles (FIPs). The project uses Python for analysis and includes code for processing survey data, mapping questions, and extracting valuable insights.
 
-The data is on Zenodo at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10285647.svg
-
-)](https://doi.org/10.5281/zenodo.10285647
-
-)
+The data is on Zenodo at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10901000.svg)](https://doi.org/10.5281/zenodo.10901000)
 
 ## Knowledge Models
 The project includes knowledge models from FAIR Wizard for both Leiden and Vrije Universiteit Amsterdam, facilitating comprehensive analysis.
